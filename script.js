@@ -7,7 +7,7 @@ function getComputerChoice() {
 function getWeaponName(choice) {
     if(choice == 0) return "Rock";
     if(choice == 1) return "Paper";
-    if(choice == 2) return "Scissor";
+    if(choice == 2) return "Scissors";
 }
 
 // Global variabls to keep track of scores
@@ -31,12 +31,14 @@ function playRound(computerSelection, playerSelection) {
         resultMessage = `You both chose ${getWeaponName(computerSelection)}`;
     }
     else if((playerSelection == 0 && computerSelection == 2) || (playerSelection == 1 && computerSelection == 0) || (playerSelection == 2 && computerSelection == 1)){
-        resultMessage = `${getWeaponName(playerSelection)} beats ${getWeaponName(computerSelection)}`;
+        if(playerSelection == 2) resultMessage = `${getWeaponName(playerSelection)} beat ${getWeaponName(computerSelection)}`
+        else resultMessage = `${getWeaponName(playerSelection)} beats ${getWeaponName(computerSelection)}`;
         playerScore++;
         updateScoreCard();
     }
     else {
-        resultMessage = `${getWeaponName(computerSelection)} beats ${getWeaponName(playerSelection)}`;
+        // resultMessage = `${getWeaponName(computerSelection)} beats ${getWeaponName(playerSelection)}`;
+        resultMessage = `${getWeaponName(playerSelection)} is beaten by ${getWeaponName(computerSelection)}`;
         computerScore++;
         updateScoreCard();
     }
