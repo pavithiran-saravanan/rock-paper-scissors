@@ -4,10 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Rock Paper Scissor</h1>
+        </div>
+        <div class="playArea">
+            <div class="player-card card">
+                <div class="score-box">
+                    <div class="score player-running-score">0</div>
+                </div>
+                <div class="text-box">
+                    <div class="text">Player</div>
+                </div>
+            </div>
+            <div class="center-card">
+                <div class="center-card-content">
+                    <div class="output-container">
+                        <div class="winner output"></div>
+                        <div class="round-result output">Choose Your Weapon</div>
+                    </div>
+                    <div class="buttons-container">
+                        <input type="button" value="Rock" class="select btn" id="rock-btn"></input>
+                        <input type="button" value="Paper" class="select btn" id="paper-btn"></input>
+                        <input type="button" value="Scissor" class="select btn" id="scissor-btn"></input>
+                        <input type="button" value="Play Again" class="again btn hidden" id="again"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="computer-card card">
+                <div class="score-box">
+                    <div class="score computer-running-score">0</div>
+                </div>
+                <div class="text-box">
+                    <div class="text">Computer</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://github.com/pavithiran-saravanan/rock-paper-scissors">Github</a>
+        </div>
+        
+    </div>
     
 </body>
 </html>
